@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+os.environ["GROQ_API_KEY"] = st.secrets("GROQ_API_KEY")
 
 agent = Agent(
     model=Groq(id="qwen-2.5-32b"),
